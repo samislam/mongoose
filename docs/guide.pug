@@ -382,7 +382,8 @@ block content
         alias: 'name'
       }
     });
-
+    
+    const Person = model("Person", personSchema);
     // Setting `name` will propagate to `n`
     const person = new Person({ name: 'Val' });
     console.log(person); // { n: 'Val' }

@@ -148,6 +148,8 @@ block content
     Note that the `error` event in the code above does not fire when mongoose loses 
     connection after the initial connection was established. You can listen to the
     `disconnected` event for that purpose.
+    
+    And please note, the `error` event will be emitted before & after the initial connection was established, so if you're using both the 'error' event and try{} catch() for watching errors, you'll catch the error twice if an error occured before the initial connection has been established.
 
     <h3 id="options"><a href="#options">Options</a></h3>
 
